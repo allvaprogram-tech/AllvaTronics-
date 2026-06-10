@@ -1,0 +1,44 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "timestamp"
+        }
+      },
+      "required": ["email", "name", "createdAt"]
+    },
+    "Project": {
+      "title": "Project",
+      "description": "User project for schematic and PCB",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "updateAt": { "type": "timestamp" },
+        "elements": { "type": "string" },
+        "pcbElements": { "type": "string" }
+      },
+      "required": ["userId", "name", "updateAt"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "User",
+      "description": "User profiles"
+    },
+    "projects/{projectId}": {
+      "schema": "Project",
+      "description": "Saved PCB and schematic projects"
+    }
+  }
+}

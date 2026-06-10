@@ -1,0 +1,8 @@
+{
+  "name": "AllvaTronics Pro",
+  "description": "Professional canvas-based schematic and PCB design editor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
